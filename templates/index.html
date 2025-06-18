@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realtime WebSocket Audio Streaming</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Live Transcription</h1>
+    <div class="controls">
+      <button id="startButton">🎤 Start</button>
+      <button id="stopButton">⛔ Stop</button>
+      <span id="timer">00:00</span>
+    </div>
+    <canvas id="visualizer" width="600" height="100"></canvas>
+    <div id="liveCaption" class="caption"></div>
+    <textarea id="fullTranscript" readonly></textarea>
+  </div>
+  <script src="https://www.webrtc-experiment.com/RecordRTC.js"></script>
+  <script type="module" src="/static/js/audio.js"></script>
+  <script type="module" src="/static/js/ws.js"></script>
+  <script type="module" src="/static/js/main.js"></script>
+</body>
+</html>

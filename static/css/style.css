@@ -1,0 +1,55 @@
+body {
+  background: #111;
+  color: #eee;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+#timer {
+  font-size: 1.2em;
+  color: #0f0;
+}
+#visualizer {
+  background: #222;
+  margin-top: 15px;
+  width: 100%;
+}
+#liveCaption {
+  height: 60px;
+  font-size: 1.2em;
+  margin-top: 10px;
+  background: #000;
+  border: 1px solid #555;
+  padding: 10px;
+  color: #0f0;
+  overflow-y: auto;
+}
+#fullTranscript {
+  margin-top: 10px;
+  height: calc(100vh - 300px);
+  width: 100%;
+  background: #000;
+  color: #0f0;
+  border: 1px solid #555;
+  padding: 10px;
+  resize: none;
+  overflow-y: auto;
+}

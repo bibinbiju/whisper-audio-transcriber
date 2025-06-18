@@ -1,0 +1,6 @@
+Flask
+gevent-websocket
+flask-sockets
+git+https://github.com/openai/whisper.git
+gevent
+ffmpeg-python
