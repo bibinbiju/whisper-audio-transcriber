@@ -13,7 +13,7 @@ app = Flask(__name__)
 sockets = Sockets(app)
 
 # Load Whisper model
-model = whisper.load_model('small.en')
+model = whisper.load_model('base.en')
 
 # Function to detect silence
 def is_silent(audio, threshold=0.001):
