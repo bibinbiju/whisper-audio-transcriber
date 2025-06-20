@@ -16,14 +16,17 @@ function startRecording(onData) {
         recorderType: StereoAudioRecorder,
         desiredSampRate: 16000,
         numberOfAudioChannels: 1,
-        timeSlice: 500,
+        timeSlice: 4000,
         ondataavailable: function(blob) {
-          const reader = new FileReader();
-          reader.onloadend = function () {
-            const base64String = reader.result.split(',')[1]; // remove "data:audio/wav;base64," part
-            onData(base64String); // send to server or handler
-          };
-          reader.readAsDataURL(blob); // this converts blob to base64
+          blob.arrayBuffer().then(buffer => {
+            onData(buffer); // send binary
+          });
+          // const reader = new FileReader();
+          // reader.onloadend = function () {
+          //   const base64String = reader.result.split(',')[1]; // remove "data:audio/wav;base64," part
+          //   onData(base64String); // send to server or handler
+          // };
+          // reader.readAsDataURL(blob); // this converts blob to base64
         }
       });
       recorder.startRecording();
